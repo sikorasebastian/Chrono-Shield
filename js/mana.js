@@ -1,4 +1,4 @@
-import { shieldSpeed, baseShieldSpeed } from './shield.js';
+import { shieldSpeed, baseShieldSpeed, resetShieldSpeed } from './shield.js';
 
 export let mana = 100;
 const maxMana = 100;
@@ -22,6 +22,6 @@ export function depleteMana() {
     }
 
     if (mana === 0) {
-        shieldSpeed = baseShieldSpeed;
+        resetShieldSpeed();
     }
 }
